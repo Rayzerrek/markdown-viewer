@@ -77,7 +77,7 @@ function ToastContainer({ toasts, onRemove }: { toasts: Toast[]; onRemove: (id: 
         <div
           key={t.id}
           className={cn(
-            "flex items-center gap-3 px-4 py-3 rounded-lg shadow-lg min-w-[300px] max-w-[400px] animate-in slide-in-from-right",
+            "flex items-center gap-3 px-4 py-3 rounded-lg shadow-lg min-w-75 max-w-100 animate-in slide-in-from-right",
             t.type === "success" && "bg-green-600 text-white",
             t.type === "error" && "bg-red-600 text-white",
             t.type === "info" && "bg-primary text-white",
@@ -434,7 +434,7 @@ function App() {
       </aside>
 
       <div className="flex-1 flex flex-col min-w-0">
-        <header className="sticky top-0 z-40 border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+        <header className="sticky top-0 z-40 border-b bg-background/95 backdrop-blur supports-backdrop-filter:bg-background/60">
           <div className="flex h-14 items-center justify-between px-4">
             <div className="flex items-center gap-2">
               <Button variant="ghost" size="icon" onClick={() => setIsSidebarOpen(!isSidebarOpen)}>
